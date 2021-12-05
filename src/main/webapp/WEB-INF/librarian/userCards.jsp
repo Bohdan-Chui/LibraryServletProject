@@ -16,8 +16,8 @@
     <table class="table">
         <tr>
             <th>UserID</th>
-            <th><fmt:message key="patronymic"></th>
-            <th><fmt:message key="name"></th>
+            <th><fmt:message key="patronymic"/></th>
+            <th><fmt:message key="name"/></th>
             <th><fmt:message key="author"/></th>
             <th><fmt:message key="place"/></th>
             <th><fmt:message key="fine"/></th>

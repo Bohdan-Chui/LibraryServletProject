@@ -29,7 +29,7 @@ public class CatalogViewCommand implements Command {
         String sortOption = request.getParameter("options");
         log.info("sortOption: "+ sortOption +"publisher: " + publisher + "name: "+ name);
 
-        int numberOfPages = 0;
+        int numberOfPages;
 
 
         if (sortOption != null && !sortOption.equals("")) {
@@ -47,10 +47,8 @@ public class CatalogViewCommand implements Command {
                     list = BookDao.selectAllBooksSortedByPublishedTimeWithLimit(page, 9);
                     break;
             }
-
             int numberOfRecords = BookDao.selectAllBooks().size();
             numberOfPages = (int) Math.ceil(numberOfRecords * 1.0 / 9);
-
         } else {
             if(publisher!=null && !publisher.equals("")){
 
@@ -61,10 +59,13 @@ public class CatalogViewCommand implements Command {
             }else{
                 if(name!=null && !name.equals("")){
                     list = BookDao.findBookByNameWithLimit(name, page, 9);
-                    int numberOfRecords = BookDao.findBookByName(publisher).size();
+                    int numberOfRecords = BookDao.findBookByName(name).size();
                     numberOfPages = (int) Math.ceil(numberOfRecords * 1.0 / 9);
                 }else {
                     list = BookDao.selectAllBooksWithLimit(page, 9);
+                    int numberOfRecords = BookDao.selectAllBooks().size();
+                    numberOfPages = (int) Math.ceil(numberOfRecords * 1.0 / 9);
+
                 }
 
             }

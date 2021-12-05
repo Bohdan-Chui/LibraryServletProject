@@ -69,7 +69,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="inputEmail1" class="form-label"><fmt:message key="email"/></label>
-                    <input type="email"required  name="email" class="form-control" id="inputEmail1" placeholder="<fmt:message key="enterEmail"/>">
+                    <input type="email" required  name="email" class="form-control" id="inputEmail1" placeholder="<fmt:message key="enterEmail"/>">
                     <div id="emailHelp" class="form-text"><fmt:message key="safety"/></div>
                 </div>
                 <div class="mb-3">

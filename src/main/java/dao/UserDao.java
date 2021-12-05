@@ -117,7 +117,6 @@ public class UserDao {
             preparedStatement.setString(5, user.getPassword());
             preparedStatement.setString(6, user.getRole());
 
-            System.out.println(preparedStatement);
             result = preparedStatement.executeUpdate();
             DBManager.getInstance().commitAndClose(connection);
         } catch (SQLException e) {
@@ -151,14 +150,12 @@ public class UserDao {
         PreparedStatement pstmt = null;
         ResultSet rs = null;
         Connection con = null;
-        System.out.println("find1");
         try {
             con = DBManager.getConnection();
             UserMapper mapper = new UserMapper();
             pstmt = con.prepareStatement(SQL__FIND_USER_BY_EMAIL);
             pstmt.setString(1, email);
             rs = pstmt.executeQuery();
-            System.out.println("find2");
             if (rs.next())
                 user = mapper.mapRow(rs);
             rs.close();

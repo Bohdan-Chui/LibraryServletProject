@@ -64,12 +64,11 @@ public class FrontController extends HttpServlet {
         if(command == null){
             req.setAttribute("errorMessage", "the page doesn't exist");
             req.getRequestDispatcher("/WEB-INF/error.jsp").forward(req, resp);
-            System.err.println("null command: " + command);
+            log.info("null command: " + command);
             return;
         }
         try {
             String page = command.process(req, resp);
-            System.out.println("null page");
             if(page != null){
                 if (page.contains("redirect:")) {
                     resp.sendRedirect(page.replace("redirect:", ""));
@@ -83,7 +82,7 @@ public class FrontController extends HttpServlet {
         }catch (Exception e){
             req.setAttribute("errorMessage", e.getMessage());
             req.getRequestDispatcher("/WEB-INF/error.jsp").forward(req, resp);
-            System.err.println(e);
+            log.info(e);
         }
     }
 }

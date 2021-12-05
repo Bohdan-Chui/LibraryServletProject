@@ -7,7 +7,7 @@
 
 <html lang="${sessionScope.locale}">
     <title><fmt:message key="library"/></title>
-</head>
+
 <body>
 
 <div class="container">
@@ -115,7 +115,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="inputPublisher" class="form-label"><fmt:message key="publisher"/></label>
-                    <input type="Da" required name="publisher" class="form-control" id="inputPublisher"
+                    <input type="text" required name="publisher" class="form-control" id="inputPublisher"
                            placeholder="<fmt:message key="Ukraine"/>" pattern="[A-Za-zА-Яа-я]+" title="letters only code">
                 </div>
                 <div class="mb-3">

@@ -136,7 +136,6 @@ public class CardDao {
 
     public static List<Card> selectAllUsersCards(int userId) {
         fineCounter();
-
         List<Card> list = new ArrayList<Card>();
         PreparedStatement stmt = null;
         ResultSet rs = null;
@@ -174,10 +173,9 @@ public class CardDao {
                 card.setStatus(rs.getString("status"));
                 card.setReturnDate(rs.getDate("returnDate"));
                 card.setFine(rs.getInt("fine"));
-                System.out.println(card);
+
                 return card;
             }catch (Exception e) {
-                System.out.println(e);
                 throw new IllegalStateException(e);
             }
     }

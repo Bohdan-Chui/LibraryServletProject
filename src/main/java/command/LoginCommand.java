@@ -24,7 +24,6 @@ public class LoginCommand implements Command {
             response.getWriter().println("<script type='text/javascript'>alert('Login/password cannot be empty');" +
                     "location='" + request.getContextPath() + Actions.LOGIN_JSP + "'</script>");
             log.info("Login/password cannot be empty");
-            System.out.println("null email or pass");
             return null;
         }
 
@@ -42,9 +41,7 @@ public class LoginCommand implements Command {
             log.info("Wrong password");
             return null;
         }
-        if(session.getAttribute("userId") != null){
-            int guestId = (int)session.getAttribute("userId");
-        }
+
 
         session.setAttribute("patronymic", user.getPatronymic());
         session.setAttribute("firstname", user.getFirstname());

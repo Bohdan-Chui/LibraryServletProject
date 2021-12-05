@@ -18,9 +18,7 @@ public class BookAdminEditViewCommand implements Command {
     @Override
     public String process(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         log.info("BookViewAdminCommand start");
-        HttpSession session = request.getSession();
         int id = Integer.parseInt(request.getParameter("id"));
-        System.out.println("id = " + id);
         Book book = BookDao.selectBookById(id);
         request.setAttribute("book", book);
         log.info("BookViewAdminCommand End");

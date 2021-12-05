@@ -211,7 +211,6 @@ public class BookDao {
             preparedStatement.setString(3, book.getPublisher());
             preparedStatement.setInt(4, book.getCount());
             preparedStatement.setDate(5, new java.sql.Date(book.getPublishedTime().getTime()));
-            System.out.println(preparedStatement);
             result = preparedStatement.executeUpdate();
             DBManager.getInstance().commitAndClose(connection);
         } catch (SQLException e) {
@@ -435,7 +434,6 @@ public class BookDao {
 
                 return book;
             } catch (Exception e) {
-                System.out.println(e);
                 throw new IllegalStateException(e);
             }
         }

@@ -9,7 +9,7 @@ public class LocaleFilter implements Filter {
     private FilterConfig config;
 
     @Override
-    public void init(FilterConfig filterConfig) throws ServletException {
+    public void init(FilterConfig filterConfig) {
         config = filterConfig;
     }
 

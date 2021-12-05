@@ -17,7 +17,6 @@ public class UserAddLibrarianCommand implements Command {
     public String process(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         log.info("userAddLibrarianCommand");
         String errorMessage;
-        HttpSession session = request.getSession();
         String forward = Actions.ERROR_PAGE;
         User user =new User();
 

@@ -1,9 +1,7 @@
 package command;
 
 import dao.BookDao;
-import dao.CardDao;
 import model.Book;
-import model.Card;
 import org.apache.log4j.Logger;
 import util.Actions;
 

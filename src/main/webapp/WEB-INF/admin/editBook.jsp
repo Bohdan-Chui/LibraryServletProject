@@ -25,12 +25,12 @@
                 <div class="mb-3">
                     <label for="inputAuthor" class="form-label"><fmt:message key="author"/></label>
                     <input type="text" required name="author" class="form-control" id="inputAuthor"
-                           pattern="[A-Za-zА-Яа-я]+" title="<fmt:message key="lettersOnly"/> "value="${requestScope.book.author}">
+                           pattern="[A-Za-zА-Яа-я]+" title="<fmt:message key="lettersOnly"/> " value="${requestScope.book.author}">
                 </div>
                 <div class="mb-3">
                     <label for="inputPublisher" class="form-label"><fmt:message key="publisher"/></label>
                     <input type="text" required name="publisher" class="form-control" id="inputPublisher"
-                           pattern="[A-Za-zА-Яа-я]+" title="<fmt:message key="lettersOnly"/>"value="${requestScope.book.publisher}">
+                           pattern="[A-Za-zА-Яа-я]+" title="<fmt:message key="lettersOnly"/>" value="${requestScope.book.publisher}">
                 </div>
                 <div class="mb-3">
                     <label for="inputPublishedTime" class="form-label"><fmt:message key="publisedTime"/></label>

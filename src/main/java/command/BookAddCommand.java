@@ -22,7 +22,6 @@ public class BookAddCommand implements Command {
         try {
             log.info("bookAddCommand start");
             String errorMessage;
-            HttpSession session = request.getSession();
             String forward = Actions.ERROR_PAGE;
             Book book = new Book();
 
