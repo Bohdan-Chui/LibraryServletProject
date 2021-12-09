@@ -22,17 +22,17 @@
             <div class="mb-3">
                 <label for="inputPatronymic" class="form-label"><fmt:message key="signUp"/></label>
                 <input type="text" required name="patronymic" class="form-control" id="inputPatronymic"
-                       placeholder="<fmt:message key="enterPatronymic"/>">
+                       placeholder="<fmt:message key="enterPatronymic"/>" pattern="[A-Za-zА-Яа-я]+" title="letters only code" >
             </div>
             <div class="mb-3">
                 <label for="inputFirstName" class="form-label"><fmt:message key="firstname"/></label>
                 <input type="text" required name="firstname" class="form-control" id="inputFirstName"
-                       placeholder="<fmt:message key="inputFirstName"/>">
+                       placeholder="<fmt:message key="inputFirstName"/>" pattern="[A-Za-zА-Яа-я]+" title="letters only code" >
             </div>
             <div class="mb-3">
                 <label for="inputSecondName" class="form-label"><fmt:message key="secondname"/></label>
                 <input type="text" required name="secondname" class="form-control" id="inputSecondName"
-                       placeholder="<fmt:message key="inputSecondname"/>">
+                       placeholder="<fmt:message key="inputSecondname"/>" pattern="[A-Za-zА-Яа-я]+" title="letters only code" >
             </div>
             <div class="mb-3">
                 <label for="inputEmail1" class="form-label"><fmt:message key="email"/></label>
